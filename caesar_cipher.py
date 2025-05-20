@@ -2,7 +2,7 @@
 alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
 
 # Get user input for operation type, message, and shift value
-direction = input("Type 'encode' to encrypt, type 'decode' to decrypt:\n").lower()  # Convert to lowercase for case-insensitive comparison
+direction = input("Please type 'encode' to encrypt, or 'decode' to decrypt:\n").lower()  # Convert to lowercase for case-insensitive comparison
 text = input("Type your message:\n").lower()  # Convert message to lowercase
 shift = int(input("Type the shift number:\n"))  # Convert shift to integer
 
@@ -26,7 +26,7 @@ def decrypt(original_text, shift_amount):
         shifted_position %= len(alphabet)  # Use modulo to handle wrap-around (e.g., 'a' - 1 = 'z')
         decoded_message += alphabet[shifted_position]  # Add the unshifted letter to the decoded message
 
-    print(f"Here is the decoded_message: {decoded_message}")  # Display the decrypted message
+    print(f"Here is the decoded message: {decoded_message}")  # Display the decrypted message
 
 
 
